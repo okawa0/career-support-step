@@ -42,26 +42,26 @@ body {
     color: #333;
 }
 
-.company {
+.step {
     padding: 40px 16px 40px;
     overflow: hidden;
 }
 
-.company__inner {
+.step__inner {
     margin-left: auto;
     margin-right: auto;
     max-width: 1080px;
 }
 
-.company__title {
+.step__title {
     text-align: center;
 }
 
-.company__title-en {
+.step__title-en {
     width: 200px;
 }
 
-.company__title-jp {
+.step__title-jp {
     display: block;
     margin: -4px 0 0;
     font-size: 16px;
@@ -69,23 +69,23 @@ body {
     line-height: 1.4;
 }
 
-.company__table {
+.step__table {
     margin-top: 36px;
     width: 100%;
     border-collapse: collapse;
     border: 1.5px solid #aaa;
 }
 
-.company__row {
+.step__row {
     display: block;
     border-top: 1.5px solid #aaa;
 }
 
-.company__row:first-child {
+.step__row:first-child {
     border-top: 0;
 }
 
-.company__term {
+.step__term {
     display: block;
     padding: 18px 20px;
     width: 100%;
@@ -98,7 +98,7 @@ body {
     text-align: left;
 }
 
-.company__description {
+.step__description {
     display: block;
     padding: 18px 20px;
     width: 100%;
@@ -109,12 +109,12 @@ body {
 }
 
 
-.company__cta-wrap {
+.step__cta-wrap {
     margin-top: 36px;
     text-align: center;
 }
 
-.company__cta {
+.step__cta {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -132,43 +132,43 @@ body {
     transition: opacity 0.3s;
 }
 
-.company__cta-icon {
+.step__cta-icon {
     display: flex;
     transition: transform 0.3s;
 }
 
-.company__cta:hover {
+.step__cta:hover {
     opacity: 0.85;
 }
 
-.company__cta:hover .company__cta-icon {
+.step__cta:hover .step__cta-icon {
     transform: translateX(6px);
 }
 
 @media screen and (min-width: 768px) {
-    .company {
+    .step {
         padding: 56px 40px 72px;
     }
 
-    .company__title-en {
+    .step__title-en {
         width: 512px;
     }
 
-    .company__title-jp {
+    .step__title-jp {
         margin-top: -8px;
         font-size: 24px;
     }
 
-    .company__table {
+    .step__table {
         margin-top: 80px;
     }
 
-    .company__row {
+    .step__row {
         display: table-row;
         border-top: 0;
     }
 
-    .company__term {
+    .step__term {
         display: table-cell;
         padding: 25px 32px;
         width: 20%;
@@ -180,23 +180,23 @@ body {
         vertical-align: middle;
     }
 
-    .company__description {
+    .step__description {
         display: table-cell;
         padding: 25px 40px;
         border-top: 1.5px solid #aaa;
         vertical-align: middle;
     }
 
-    .company__row:first-child .company__term,
-    .company__row:first-child .company__description {
+    .step__row:first-child .step__term,
+    .step__row:first-child .step__description {
         border-top: 0;
     }
 
-    .company__cta-wrap {
+    .step__cta-wrap {
         margin-top: 80px;
     }
 
-    .company__cta {
+    .step__cta {
         max-width: auto;
         min-width: 400px;
         padding: 18px 40px;
@@ -206,15 +206,15 @@ body {
 }
 
 @media screen and (min-width: 1025px) {
-    .company {
+    .step {
         padding: 72px 40px 88px;
     }
 
-    .company__title {
+    .step__title {
         position: relative;
     }
 
-    .company__title-jp {
+    .step__title-jp {
         position: absolute;
         top: 50%;
         left: calc(50% + 220px);
@@ -222,7 +222,7 @@ body {
         margin-top: 0;
     }
 
-    .company__table {
+    .step__table {
         width: 960px;
         margin-right: auto;
         margin-left: auto;
@@ -230,16 +230,16 @@ body {
 }
 
 @media screen and (min-width: 1441px) {
-    .company {
+    .step {
         padding-top: 88px;
         padding-bottom: 104px;
     }
 
-    .company__inner {
+    .step__inner {
         max-width: 1200px;
     }
 
-    .company__title-en {
+    .step__title-en {
         font-size: 136px;
     }
 }
