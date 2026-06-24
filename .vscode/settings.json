@@ -1,0 +1,10 @@
+{
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "text": "コミットメッセージは必ず日本語で生成してください。"
+    },
+    {
+      "text": "プレフィックス（feat:, fix:, docs:, style:, refactor:, chore: など）は英語のまま維持し、それに続く説明文を日本語で記述してください。"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+# Git Commit Message Rules
+- コミットメッセージを生成する際は、必ず日本語で記述してください。
+- Conventional Commits の形式（feat, fix, docs, refactor, style, chore など）を使用してください。
+- プレフィックス（例: `feat: `, `fix: `）は英語のままとし、その後のメッセージ内容を日本語で記述してください。
+  - 例: `feat: ユーザーログイン機能を追加`
+  - 例: `fix: スタイルのズレを修正`

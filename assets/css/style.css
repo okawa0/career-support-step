@@ -1,0 +1,245 @@
+@font-face {
+    font-family: "Zen Kaku Gothic New";
+    src: url("../fonts/zenkaku-gothic-new-regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Zen Kaku Gothic New";
+    src: url("../fonts/zenkaku-gothic-new-medium-jp.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Zen Kaku Gothic New";
+    src: url("../fonts/zenkaku-gothic-new-bold-jp.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --font-base: "Zen Kaku Gothic New", sans-serif;
+    --color-primary: #0452a3;
+    --color-secondary: #0453a4;
+    --color-text: #333;
+    --color-bg: #ffffff;
+    --color-text-bg: #d8f0ff;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-base);
+    color: #333;
+}
+
+.company {
+    padding: 40px 16px 40px;
+    overflow: hidden;
+}
+
+.company__inner {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1080px;
+}
+
+.company__title {
+    text-align: center;
+}
+
+.company__title-en {
+    width: 200px;
+}
+
+.company__title-jp {
+    display: block;
+    margin: -4px 0 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.company__table {
+    margin-top: 36px;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1.5px solid #aaa;
+}
+
+.company__row {
+    display: block;
+    border-top: 1.5px solid #aaa;
+}
+
+.company__row:first-child {
+    border-top: 0;
+}
+
+.company__term {
+    display: block;
+    padding: 18px 20px;
+    width: 100%;
+    background: #D8F0FF;
+    border-bottom: 1.5px solid #aaa;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.7;
+    color: var(--color-primary);
+    text-align: left;
+}
+
+.company__description {
+    display: block;
+    padding: 18px 20px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #333333;
+}
+
+
+.company__cta-wrap {
+    margin-top: 36px;
+    text-align: center;
+}
+
+.company__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 14px 24px;
+    width: 100%;
+    max-width: 320px;
+    background: var(--color-primary);
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #ffffff;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.company__cta-icon {
+    display: flex;
+    transition: transform 0.3s;
+}
+
+.company__cta:hover {
+    opacity: 0.85;
+}
+
+.company__cta:hover .company__cta-icon {
+    transform: translateX(6px);
+}
+
+@media screen and (min-width: 768px) {
+    .company {
+        padding: 56px 40px 72px;
+    }
+
+    .company__title-en {
+        width: 512px;
+    }
+
+    .company__title-jp {
+        margin-top: -8px;
+        font-size: 24px;
+    }
+
+    .company__table {
+        margin-top: 80px;
+    }
+
+    .company__row {
+        display: table-row;
+        border-top: 0;
+    }
+
+    .company__term {
+        display: table-cell;
+        padding: 25px 32px;
+        width: 20%;
+        min-width: 160px;
+        border-top: 1.5px solid #aaa;
+        border-right: 1.5px solid #aaa;
+        border-bottom: 0;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .company__description {
+        display: table-cell;
+        padding: 25px 40px;
+        border-top: 1.5px solid #aaa;
+        vertical-align: middle;
+    }
+
+    .company__row:first-child .company__term,
+    .company__row:first-child .company__description {
+        border-top: 0;
+    }
+
+    .company__cta-wrap {
+        margin-top: 80px;
+    }
+
+    .company__cta {
+        max-width: auto;
+        min-width: 400px;
+        padding: 18px 40px;
+        font-size: 18px;
+        gap: 32px;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .company {
+        padding: 72px 40px 88px;
+    }
+
+    .company__title {
+        position: relative;
+    }
+
+    .company__title-jp {
+        position: absolute;
+        top: 50%;
+        left: calc(50% + 220px);
+        transform: translate(-50%, -50%);
+        margin-top: 0;
+    }
+
+    .company__table {
+        width: 960px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media screen and (min-width: 1441px) {
+    .company {
+        padding-top: 88px;
+        padding-bottom: 104px;
+    }
+
+    .company__inner {
+        max-width: 1200px;
+    }
+
+    .company__title-en {
+        font-size: 136px;
+    }
+}
