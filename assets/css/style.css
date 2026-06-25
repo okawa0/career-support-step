@@ -56,18 +56,27 @@ body {
 .step__title {
     position: relative;
     z-index: 3;
-    margin: 0;
+    margin: 0 auto;
     font-size: 32px;
     font-weight: 700;
     line-height: 1.35;
     color: var(--color-primary);
     text-align: left;
-    letter-spacing: 0.08em;
     transform: skewY(-10deg);
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 360px;
 }
 
-.step__title-break {
-    display: block;
+.step__title-line:nth-child(1) {
+    align-self: flex-start;
+    text-align: left;
+}
+
+.step__title-line:last-child {
+    align-self: flex-end;
+    text-align: right;
 }
 
 .step__arrow {
@@ -91,28 +100,27 @@ body {
     display: grid;
     position: relative;
     z-index: 4;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
-        ". . grade-one grade-one"
-        ". grade-two grade-two ."
-        "grade-three grade-three . .";
+        ". . grade-one"
+        ". grade-two ."
+        "grade-three . .";
     margin-top: -200px;
     width: 100%;
 }
 
 .step__level {
     display: grid;
-    grid-template-columns: 54px 84px;
+    grid-template-columns: 30px 84px;
     grid-template-areas:
         ". image"
         "content content";
     align-items: start;
-    width: 135px;
 }
 
 .step__level--grade-three {
     grid-area: grade-three;
-    justify-self: start;
+    justify-self: center;
 }
 
 .step__level--grade-two {
@@ -122,7 +130,7 @@ body {
 
 .step__level--grade-one {
     grid-area: grade-one;
-    justify-self: end;
+    justify-self: center;
 }
 
 .step__content {
@@ -134,7 +142,7 @@ body {
 
 .step__grade {
     margin: 0;
-    font-size: 25px;
+    font-size: 16px;
     font-weight: 700;
     line-height: 1.1;
     color: #333333;
@@ -142,7 +150,7 @@ body {
 
 .step__grade-text {
     margin: 0;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 700;
     line-height: 1.45;
     color: #333333;
@@ -151,7 +159,7 @@ body {
 .step__image {
     display: block;
     grid-area: image;
-    width: 77px;
+    width: 64px;
     height: auto;
 }
 
@@ -248,6 +256,8 @@ body {
     transform: translateX(6px);
 }
 
+@media screen and (min-width:481px) {}
+
 @media screen and (min-width: 768px) {
     .step {
         padding: 56px 40px 72px;
@@ -257,10 +267,6 @@ body {
         font-size: 43px;
         line-height: 1.2;
         transform: rotate(-7deg);
-    }
-
-    .step__title-break {
-        display: none;
     }
 
     .step__arrow {
