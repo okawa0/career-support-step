@@ -43,7 +43,7 @@ body {
 }
 
 .step {
-    padding: 40px 16px 40px;
+    padding: 40px 0;
     overflow: hidden;
 }
 
@@ -54,60 +54,163 @@ body {
 }
 
 .step__title {
-    text-align: center;
-}
-
-.step__title-en {
-    width: 200px;
-}
-
-.step__title-jp {
-    display: block;
-    margin: -4px 0 0;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.4;
-}
-
-.step__table {
-    margin-top: 36px;
-    width: 100%;
-    border-collapse: collapse;
-    border: 1.5px solid #aaa;
-}
-
-.step__row {
-    display: block;
-    border-top: 1.5px solid #aaa;
-}
-
-.step__row:first-child {
-    border-top: 0;
-}
-
-.step__term {
-    display: block;
-    padding: 18px 20px;
-    width: 100%;
-    background: #D8F0FF;
-    border-bottom: 1.5px solid #aaa;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 1.7;
+    position: relative;
+    z-index: 3;
+    margin: 0;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.35;
     color: var(--color-primary);
     text-align: left;
+    letter-spacing: 0.08em;
+    transform: skewY(-10deg);
 }
 
-.step__description {
+.step__title-break {
     display: block;
-    padding: 18px 20px;
+}
+
+.step__arrow {
+    display: block;
+    position: relative;
+    z-index: 2;
+    margin-top: 0;
+    margin-right: auto;
+    margin-left: -32px;
+    width: 86%;
+    max-width: 360px;
+}
+
+.step__arrow img {
+    display: block;
     width: 100%;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.7;
+    height: auto;
+}
+
+.step__levels {
+    display: grid;
+    position: relative;
+    z-index: 4;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+        ". . grade-one grade-one"
+        ". grade-two grade-two ."
+        "grade-three grade-three . .";
+    margin-top: -200px;
+    width: 100%;
+}
+
+.step__level {
+    display: grid;
+    grid-template-columns: 54px 84px;
+    grid-template-areas:
+        ". image"
+        "content content";
+    align-items: start;
+    width: 135px;
+}
+
+.step__level--grade-three {
+    grid-area: grade-three;
+    justify-self: start;
+}
+
+.step__level--grade-two {
+    grid-area: grade-two;
+    justify-self: center;
+}
+
+.step__level--grade-one {
+    grid-area: grade-one;
+    justify-self: end;
+}
+
+.step__content {
+    display: grid;
+    grid-area: content;
+    gap: 4px;
+    margin-top: -35px;
+}
+
+.step__grade {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.1;
     color: #333333;
 }
 
+.step__grade-text {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.45;
+    color: #333333;
+}
+
+.step__image {
+    display: block;
+    grid-area: image;
+    width: 77px;
+    height: auto;
+}
+
+.step__stage {
+    position: relative;
+    z-index: 1;
+    margin-top: -220px;
+    min-height: 480px;
+    background: linear-gradient(90deg, #005ca8 0%, #56c4e6 100%);
+}
+
+.step__step {
+    position: absolute;
+    top: 0;
+    background: #f7f8fb;
+}
+
+.step__step--first {
+    left: 0;
+    width: 33.33%;
+    height: 120px;
+}
+
+.step__step--second {
+    left: 33.33%;
+    width: 33.33%;
+    height: 96px;
+}
+
+.step__step--third {
+    left: 66.66%;
+    width: 33.34%;
+    height: 0;
+}
+
+.step__body {
+    position: relative;
+    z-index: 2;
+    padding: 190px 28px 44px;
+}
+
+.step__catch {
+    margin: 0;
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 1.65;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 0.08em;
+}
+
+.step__text {
+    margin: 30px 0 0;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.9;
+    color: #ffffff;
+    letter-spacing: 0.08em;
+}
 
 .step__cta-wrap {
     margin-top: 36px;
@@ -150,46 +253,106 @@ body {
         padding: 56px 40px 72px;
     }
 
-    .step__title-en {
-        width: 512px;
+    .step__title {
+        font-size: 43px;
+        line-height: 1.2;
+        transform: rotate(-7deg);
     }
 
-    .step__title-jp {
-        margin-top: -8px;
-        font-size: 24px;
+    .step__title-break {
+        display: none;
     }
 
-    .step__table {
-        margin-top: 80px;
+    .step__arrow {
+        margin-top: 4px;
+        width: 68%;
+        max-width: 720px;
     }
 
-    .step__row {
-        display: table-row;
-        border-top: 0;
+    .step__levels {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "grade-three grade-two grade-one";
+        gap: 40px;
+        margin-top: -10px;
+        min-height: 270px;
     }
 
-    .step__term {
-        display: table-cell;
-        padding: 25px 32px;
-        width: 20%;
-        min-width: 160px;
-        border-top: 1.5px solid #aaa;
-        border-right: 1.5px solid #aaa;
-        border-bottom: 0;
+    .step__level {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "content"
+            "image";
+        gap: 28px;
+        width: 220px;
+        justify-items: center;
         text-align: center;
-        vertical-align: middle;
     }
 
-    .step__description {
-        display: table-cell;
-        padding: 25px 40px;
-        border-top: 1.5px solid #aaa;
-        vertical-align: middle;
+    .step__level--grade-three {
+        justify-self: center;
     }
 
-    .step__row:first-child .step__term,
-    .step__row:first-child .step__description {
-        border-top: 0;
+    .step__level--grade-two {
+        justify-self: center;
+    }
+
+    .step__level--grade-one {
+        justify-self: center;
+    }
+
+    .step__content {
+        gap: 8px;
+        margin-top: 0;
+    }
+
+    .step__grade {
+        font-size: 32px;
+    }
+
+    .step__grade-text {
+        font-size: 21px;
+        line-height: 1.55;
+    }
+
+    .step__image {
+        width: 118px;
+    }
+
+    .step__stage {
+        margin-top: -76px;
+        min-height: 350px;
+    }
+
+    .step__step--first {
+        width: 33.33%;
+        height: 170px;
+    }
+
+    .step__step--second {
+        width: 33.33%;
+        height: 108px;
+    }
+
+    .step__step--third {
+        width: 33.34%;
+        height: 46px;
+    }
+
+    .step__body {
+        padding: 190px 130px 58px;
+    }
+
+    .step__catch {
+        font-size: 27px;
+        line-height: 1.5;
+    }
+
+    .step__text {
+        margin-top: 28px;
+        font-size: 13px;
+        line-height: 2;
+        letter-spacing: 0.08em;
     }
 
     .step__cta-wrap {
@@ -211,22 +374,22 @@ body {
     }
 
     .step__title {
-        position: relative;
+        font-size: 50px;
     }
 
-    .step__title-jp {
-        position: absolute;
-        top: 50%;
-        left: calc(50% + 220px);
-        transform: translate(-50%, -50%);
-        margin-top: 0;
+    .step__levels {
+        gap: 64px;
     }
 
-    .step__table {
-        width: 960px;
-        margin-right: auto;
-        margin-left: auto;
+    .step__stage {
+        min-height: 360px;
     }
+
+    .step__body {
+        padding-right: 150px;
+        padding-left: 150px;
+    }
+
 }
 
 @media screen and (min-width: 1441px) {
@@ -239,7 +402,4 @@ body {
         max-width: 1200px;
     }
 
-    .step__title-en {
-        font-size: 136px;
-    }
 }
