@@ -171,7 +171,7 @@ body {
     z-index: 1;
     margin-top: -160px;
     min-height: 480px;
-    background: linear-gradient(90deg, #005ca8 0%, #56c4e6 100%);
+    background: linear-gradient(90deg, #0959A8 0%, #68C8EC 100%);
 }
 
 .step__step {
@@ -206,12 +206,14 @@ body {
 
 .step__catch {
     margin: 0;
-    font-size: 27px;
+    font-size: 30px;
     font-weight: 700;
     line-height: 1.65;
     color: #ffffff;
     text-align: center;
     letter-spacing: 0.08em;
+    word-break: auto-phrase;
+    text-wrap: balance;
 }
 
 .step__text {
