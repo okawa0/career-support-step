@@ -62,7 +62,7 @@ body {
     line-height: 1.35;
     color: var(--color-primary);
     text-align: left;
-    transform: skewY(-10deg);
+    transform: skewY(-8deg);
     display: flex;
     flex-direction: column;
     width: 90%;
@@ -132,7 +132,7 @@ body {
 .step__level--grade-one {
     grid-area: grade-one;
     justify-self: center;
-    transform: translateY(24px);
+    transform: translateY(32px);
 }
 
 .step__content {
@@ -144,8 +144,8 @@ body {
 
 .step__grade {
     margin: 0;
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 500;
     line-height: 1.1;
     color: #333333;
 }
@@ -153,7 +153,7 @@ body {
 .step__grade-text {
     margin: 0;
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1.45;
     color: #333333;
     text-wrap: balance;
@@ -201,7 +201,7 @@ body {
 .step__body {
     position: relative;
     z-index: 2;
-    padding: 190px 28px 44px;
+    padding: 200px 16px 44px;
 }
 
 .step__catch {
@@ -218,15 +218,15 @@ body {
 
 .step__text {
     margin: 30px 0 0;
-    font-size: 17px;
-    font-weight: 700;
-    line-height: 1.9;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
     color: #ffffff;
     letter-spacing: 0.08em;
 }
 
 .step__cta-wrap {
-    margin-top: 36px;
+    margin-top: 60px;
     text-align: center;
 }
 
@@ -237,7 +237,7 @@ body {
     gap: 16px;
     padding: 14px 24px;
     width: 100%;
-    max-width: 320px;
+    max-width: 270px;
     background: var(--color-primary);
     border-radius: 999px;
     font-size: 14px;
@@ -261,7 +261,20 @@ body {
     transform: translateX(6px);
 }
 
-@media screen and (min-width:481px) {}
+@media screen and (min-width: 481px) {
+    .step__title {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        max-width: none;
+    }
+
+    .step__title-line:nth-child(1),
+    .step__title-line:last-child {
+        align-self: auto;
+        text-align: inherit;
+    }
+}
 
 @media screen and (min-width: 768px) {
     .step {
@@ -271,11 +284,10 @@ body {
     .step__title {
         font-size: 43px;
         line-height: 1.2;
-        transform: rotate(-7deg);
     }
 
     .step__arrow {
-        margin-top: 4px;
+        margin: -60px 0 0 300px;
         width: 68%;
         max-width: 720px;
     }
@@ -284,7 +296,7 @@ body {
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas: "grade-three grade-two grade-one";
         gap: 40px;
-        margin-top: -10px;
+        margin-top: 40px;
         min-height: 270px;
     }
 
@@ -295,7 +307,7 @@ body {
             "content"
             "image";
         gap: 28px;
-        width: 220px;
+        width: 280px;
         justify-items: center;
         text-align: center;
     }
@@ -306,10 +318,12 @@ body {
 
     .step__level--grade-two {
         justify-self: center;
+        transform: translateY(0px);
     }
 
     .step__level--grade-one {
         justify-self: center;
+        transform: translateY(0px);
     }
 
     .step__content {
@@ -318,11 +332,11 @@ body {
     }
 
     .step__grade {
-        font-size: 32px;
+        font-size: 50px;
     }
 
     .step__grade-text {
-        font-size: 21px;
+        font-size: 30px;
         line-height: 1.55;
     }
 
@@ -337,12 +351,12 @@ body {
 
     .step__step--first {
         width: 33.33%;
-        height: 170px;
+        height: 140px;
     }
 
     .step__step--second {
         width: 33.33%;
-        height: 108px;
+        height: 90px;
     }
 
     .step__step--third {
@@ -355,14 +369,14 @@ body {
     }
 
     .step__catch {
-        font-size: 27px;
+        font-size: 40px;
         line-height: 1.5;
     }
 
     .step__text {
         margin-top: 28px;
-        font-size: 13px;
-        line-height: 2;
+        font-size: 18px;
+        line-height: 1.6;
         letter-spacing: 0.08em;
     }
 
