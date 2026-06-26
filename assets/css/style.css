@@ -85,8 +85,8 @@ body {
     z-index: 2;
     margin-top: 0;
     margin-right: auto;
-    margin-left: -32px;
-    width: 86%;
+    margin-left: 10px;
+    width: 67%;
     max-width: 360px;
 }
 
@@ -105,13 +105,13 @@ body {
         ". . grade-one"
         ". grade-two ."
         "grade-three . .";
-    margin-top: -200px;
+    margin-top: -190px;
     width: 100%;
 }
 
 .step__level {
     display: grid;
-    grid-template-columns: 30px 84px;
+    grid-template-columns: 30px 70px;
     grid-template-areas:
         ". image"
         "content content";
@@ -121,6 +121,7 @@ body {
 .step__level--grade-three {
     grid-area: grade-three;
     justify-self: center;
+    padding-left: 8px;
 }
 
 .step__level--grade-two {
@@ -131,13 +132,14 @@ body {
 .step__level--grade-one {
     grid-area: grade-one;
     justify-self: center;
+    transform: translateY(24px);
 }
 
 .step__content {
     display: grid;
     grid-area: content;
     gap: 4px;
-    margin-top: -35px;
+    margin-top: -22px;
 }
 
 .step__grade {
@@ -154,6 +156,7 @@ body {
     font-weight: 700;
     line-height: 1.45;
     color: #333333;
+    text-wrap: balance;
 }
 
 .step__image {
@@ -166,7 +169,7 @@ body {
 .step__stage {
     position: relative;
     z-index: 1;
-    margin-top: -220px;
+    margin-top: -160px;
     min-height: 480px;
     background: linear-gradient(90deg, #005ca8 0%, #56c4e6 100%);
 }
@@ -174,19 +177,19 @@ body {
 .step__step {
     position: absolute;
     top: 0;
-    background: #f7f8fb;
+    background: #fff;
 }
 
 .step__step--first {
     left: 0;
     width: 33.33%;
-    height: 120px;
+    height: 168px;
 }
 
 .step__step--second {
     left: 33.33%;
     width: 33.33%;
-    height: 96px;
+    height: 70px;
 }
 
 .step__step--third {
