@@ -25,10 +25,7 @@
 :root {
     --font-base: "Zen Kaku Gothic New", sans-serif;
     --color-primary: #0452a3;
-    --color-secondary: #0453a4;
     --color-text: #333;
-    --color-bg: #ffffff;
-    --color-text-bg: #d8f0ff;
 }
 
 * {
@@ -37,9 +34,8 @@
 }
 
 body {
-    margin: 0;
     font-family: var(--font-base);
-    color: #333;
+    color: var(--color-text);
 }
 
 .step {
@@ -71,7 +67,6 @@ body {
 
 .step__title-line:nth-child(1) {
     align-self: flex-start;
-    text-align: left;
 }
 
 .step__title-line:last-child {
@@ -147,7 +142,7 @@ body {
     font-size: 20px;
     font-weight: 500;
     line-height: 1.1;
-    color: #333333;
+    color: var(--color-text);
 }
 
 .step__grade-text {
@@ -155,7 +150,7 @@ body {
     font-size: 12px;
     font-weight: 500;
     line-height: 1.45;
-    color: #333333;
+    color: var(--color-text);
     text-wrap: balance;
 }
 
@@ -318,7 +313,6 @@ body {
 
     .step__level--grade-two {
         justify-self: center;
-        transform: translateY(0px);
     }
 
     .step__level--grade-one {
@@ -385,7 +379,7 @@ body {
     }
 
     .step__cta {
-        max-width: auto;
+        max-width: none;
         min-width: 400px;
         padding: 18px 40px;
         font-size: 18px;
