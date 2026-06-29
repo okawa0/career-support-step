@@ -39,7 +39,7 @@ body {
 }
 
 .step {
-    padding: 40px 0;
+    padding: 40px 20px;
     overflow: hidden;
 }
 
@@ -61,7 +61,7 @@ body {
     transform: skewY(-8deg);
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 100%;
     max-width: 360px;
 }
 
@@ -106,7 +106,7 @@ body {
 
 .step__level {
     display: grid;
-    grid-template-columns: 30px 70px;
+    grid-template-columns: 40px 70px;
     grid-template-areas:
         ". image"
         "content content";
@@ -127,19 +127,19 @@ body {
 .step__level--grade-one {
     grid-area: grade-one;
     justify-self: center;
-    transform: translateY(32px);
+    transform: translate(-46px, 48px);
 }
 
 .step__content {
     display: grid;
     grid-area: content;
     gap: 4px;
-    margin-top: -22px;
+    transform: translate(-12px, -36px);
 }
 
 .step__grade {
     margin: 0;
-    font-size: 20px;
+    font-size: 28px;
     font-weight: 500;
     line-height: 1.1;
     color: var(--color-text);
@@ -147,7 +147,7 @@ body {
 
 .step__grade-text {
     margin: 0;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 500;
     line-height: 1.45;
     color: var(--color-text);
@@ -157,7 +157,7 @@ body {
 .step__image {
     display: block;
     grid-area: image;
-    width: 64px;
+    width: 74px;
     height: auto;
 }
 
