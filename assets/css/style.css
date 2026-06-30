@@ -109,18 +109,18 @@ body {
 }
 
 .step__level--grade-three {
-    top: 84%;
-    left: 18%;
+    top: 108px;
+    left: 27%;
 }
 
 .step__level--grade-two {
-    top: 56%;
-    left: 42%;
+    top: 20px;
+    left: 59%;
 }
 
 .step__level--grade-one {
-    top: 80px;
-    right: 0;
+    top: -66px;
+    right: 16px;
 }
 
 .step__content {
@@ -187,6 +187,7 @@ body {
     position: absolute;
     top: 0;
     background: #fff;
+    z-index: -1;
 }
 
 .step__step--first {
