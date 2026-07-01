@@ -261,11 +261,11 @@ body {
 
 @media screen and (min-width: 768px) {
     .step {
-        padding: 56px 40px 72px;
+        padding: clamp(4.688rem, 3.646rem + 2.17vw, 6.25rem) 40px 72px;
     }
 
     .step__title {
-        font-size: 43px;
+        font-size: clamp(2.688rem, 1.146rem + 3.21vw, 5rem);
         line-height: 1.2;
         flex-direction: row;
         justify-content: center;
@@ -280,8 +280,9 @@ body {
     }
 
     .step__arrow {
-        transform: translate(11%, -15%);
-        width: 74%;
+        margin-inline: auto;
+        transform: translate(100px, -50px);
+        width: clamp(31.25rem, 14.583rem + 34.72vw, 56.25rem);
         max-width: none;
     }
 
@@ -332,21 +333,26 @@ body {
     }
 
     .step__grade {
-        font-size: 50px;
+        font-size: clamp(2.5rem, 2.083rem + 0.87vw, 3.125rem);
     }
 
     .step__grade-text {
-        font-size: 30px;
+        font-size: clamp(1.5rem, 1.25rem + 0.52vw, 1.875rem);
         line-height: 1.55;
     }
 
     .step__image {
-        width: 118px;
+        width: clamp(7.375rem, 4.792rem + 5.38vw, 11.25rem);
     }
 
     .step__stage {
         margin-top: 0;
         min-height: 350px;
+        background: none;
+    }
+
+    .step__step {
+        position: static;
     }
 
     .step__step--first {
@@ -362,6 +368,10 @@ body {
     .step__step--third {
         width: 33.34%;
         height: 46px;
+    }
+
+    .step__main {
+        background: linear-gradient(90deg, #0959A8 0%, #68C8EC 100%);
     }
 
     .step__body {
@@ -391,36 +401,4 @@ body {
         font-size: 18px;
         gap: 32px;
     }
-}
-
-@media screen and (min-width: 1025px) {
-    .step {
-        padding: 72px 40px 88px;
-    }
-
-    .step__title {
-        font-size: 64px;
-    }
-
-    .step__stage {
-        min-height: 360px;
-    }
-
-    .step__body {
-        padding-right: 150px;
-        padding-left: 150px;
-    }
-
-}
-
-@media screen and (min-width: 1441px) {
-    .step {
-        padding-top: 88px;
-        padding-bottom: 104px;
-    }
-
-    .step__inner {
-        max-width: 1200px;
-    }
-
 }
