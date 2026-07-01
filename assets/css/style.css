@@ -91,16 +91,6 @@ body {
     height: auto;
 }
 
-.step__levels {
-    position: relative;
-    z-index: 4;
-    margin-inline: auto;
-    margin-top: -68%;
-    width: 100%;
-    max-width: 390px;
-    aspect-ratio: 390 / 430;
-}
-
 .step__level {
     display: flex;
     position: absolute;
@@ -109,13 +99,13 @@ body {
 }
 
 .step__level--grade-three {
-    top: 108px;
-    left: 27%;
+    top: 111px;
+    left: 16%;
 }
 
 .step__level--grade-two {
-    top: 20px;
-    left: 59%;
+    top: 27px;
+    left: clamp(7.563rem, -6.442rem + 70.02vw, 27.125rem);
 }
 
 .step__level--grade-one {
@@ -178,7 +168,7 @@ body {
 .step__stage {
     position: relative;
     z-index: 1;
-    margin-top: -160px;
+    margin-top: -12%;
     min-height: 480px;
     background: linear-gradient(90deg, #0959A8 0%, #68C8EC 100%);
 }
@@ -302,14 +292,6 @@ body {
         max-width: 720px;
     }
 
-    .step__levels {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: "grade-three grade-two grade-one";
-        gap: 40px;
-        margin-top: 0;
-        min-height: 270px;
-    }
-
     .step__level {
         display: grid;
         grid-template-columns: 1fr;
@@ -409,10 +391,6 @@ body {
 
     .step__title {
         font-size: 64px;
-    }
-
-    .step__levels {
-        gap: 64px;
     }
 
     .step__stage {
