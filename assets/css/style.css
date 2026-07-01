@@ -288,21 +288,18 @@ body {
     .step__levels {
         display: flex;
         justify-content: space-around;
-        align-items: flex-end;
+        align-items: stretch;
         width: 100%;
         margin: 0 auto;
     }
 
     .step__level {
         position: static;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "content"
-            "image";
-        gap: 28px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
         width: 200px;
-        justify-items: center;
         text-align: center;
     }
 
@@ -320,6 +317,12 @@ body {
         top: auto;
         left: auto;
         transform: translateY(0px);
+    }
+
+    .step__level--grade-three .step__image,
+    .step__level--grade-two .step__image,
+    .step__level--grade-one .step__image {
+        margin-top: 0;
     }
 
     .step__content {
