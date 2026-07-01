@@ -39,7 +39,7 @@ body {
 }
 
 .step {
-    padding: 40px 20px;
+    padding: clamp(1.5rem, -0.29rem + 8.95vw, 4rem) 20px 40px;
     overflow: hidden;
 }
 
@@ -53,7 +53,7 @@ body {
     position: relative;
     z-index: 3;
     margin: 0 auto;
-    font-size: 32px;
+    font-size: clamp(2rem, 1.284rem + 3.58vw, 3rem);
     font-weight: 700;
     line-height: 1.35;
     color: var(--color-primary);
@@ -80,7 +80,7 @@ body {
     z-index: 2;
     margin-top: 0;
     margin-right: auto;
-    margin-left: 10px;
+    margin-left: clamp(0.625rem, -2.507rem + 15.66vw, 5rem);
     width: 67%;
     max-width: 360px;
 }
@@ -100,7 +100,7 @@ body {
 
 .step__level--grade-three {
     top: 111px;
-    left: 16%;
+    left: clamp(3.125rem, -2.96rem + 30.43vw, 11.625rem);
 }
 
 .step__level--grade-two {
@@ -168,7 +168,7 @@ body {
 .step__stage {
     position: relative;
     z-index: 1;
-    margin-top: -12%;
+    margin-top: clamp(-10.625rem, 4.389rem + -31.32vw, -1.875rem);
     min-height: 480px;
     background: linear-gradient(90deg, #0959A8 0%, #68C8EC 100%);
 }
