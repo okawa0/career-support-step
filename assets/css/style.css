@@ -302,6 +302,7 @@ body {
         align-items: center;
         width: 200px;
         text-align: center;
+        gap: 36px;
     }
 
     .step__level--grade-three {
@@ -356,26 +357,26 @@ body {
     }
 
     .step__step--first {
-        width: 33.33%;
-        height: 140px;
+        width: 66%;
+        height: 60px;
     }
 
     .step__step--second {
         width: 33.33%;
-        height: 90px;
+        height: 60px;
     }
 
     .step__step--third {
-        width: 33.34%;
-        height: 46px;
+        display: none;
     }
 
     .step__main {
+        margin-top: -36px;
         background: linear-gradient(90deg, #0959A8 0%, #68C8EC 100%);
     }
 
     .step__body {
-        padding: 190px 40px 58px;
+        padding: 40px 40px 58px;
     }
 
     .step__catch {
@@ -388,6 +389,8 @@ body {
         font-size: 18px;
         line-height: 1.6;
         letter-spacing: 0.08em;
+        max-width: 900px;
+        margin-inline: auto;
     }
 
     .step__cta-wrap {
@@ -395,10 +398,9 @@ body {
     }
 
     .step__cta {
-        max-width: none;
-        min-width: 400px;
+        width: clamp(31.25rem, 25.417rem + 12.15vw, 40rem);
         padding: 18px 40px;
-        font-size: 18px;
+        font-size: clamp(1.5rem, 1.25rem + 0.52vw, 1.875rem);
         gap: 32px;
     }
 }
